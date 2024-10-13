@@ -4,9 +4,9 @@ This project generates a dynamic HTML email template using Go Templating. The te
 
 ## Structure
 
-- `/templates/email_template.html`: The HTML template for the email.
+- `/templates/test-email-template.html`: The HTML template for the email.
 - `/main.go`: The Go file for rendering the template with dynamic data.
-- `/data/users.json`: (Optional) JSON data file with user information.
+- `/data/emailData.json`: (Optional) JSON data file with user information.
 
 ## How to Run
 

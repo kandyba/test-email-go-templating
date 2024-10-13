@@ -1,0 +1,32 @@
+{
+  "logo_url": "https://i.imgur.com/oBJqBZQ.png",
+  "title": "These people are online and ready to chat with you. Don’t miss out on the opportunity to meet someone special!",
+  "users": [
+    {
+      "user_name": "John Doe",
+      "user_city": "New York",
+      "photo_url": "https://i.imgur.com/HoVjLwd.png"
+    },
+    {
+      "user_name": "Jane Smith",
+      "user_city": "Los Angeles",
+      "photo_url": "https://i.imgur.com/HoVjLwd.png"
+    },
+    {
+      "user_name": "Emily Johnson",
+      "user_city": "Chicago",
+      "photo_url": "https://i.imgur.com/HoVjLwd.png"
+    },
+    {
+      "user_name": "Michael Brown",
+      "user_city": "Houston",
+      "photo_url": "https://i.imgur.com/HoVjLwd.png"
+    }
+  ],
+  "receiver_email": "recipient@example.com",
+  "legal_address": "1234 Elm St, Springfield, IL",
+  "bodyColor": "#FFA498",
+  "primaryColor": "#FF4931",
+  "buttonColor": "#FF4931",
+  "sender_name": "Your Company Name"
+}

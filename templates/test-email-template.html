@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="x-apple-disable-message-reformatting">
+  <title>{{ .Title }}</title>
+</head>
+<body id="wrapper" style="min-width: 320px;margin: 0; padding: 25px 16px; background-color: {{ .BodyColor }};
+font-size: 14px;
+font-family: Arial, sans-serif;">
+<!--preheader text-->
+  <div style="display: none;">
+    <span>{{ .Title }}</span>
+  </div>
+  <table width="420" role="presentation" cellpadding="0" cellspacing="0" border="0" style="width: 100%;
+  border-collapse: collapse; border: 0; border-spacing: 0; margin: 0 auto; max-width: 420px;">
+    <tr>
+      <td align="center">
+        <table cellpadding="0" cellspacing="0" border="0" style="padding: 0 0 20px;">
+          <tr>
+            <td align="center" style="padding: 0 0 10px;">
+              <img src="{{ .LogoURL }}" alt="Logo" style="display: block; width: 93px;" />
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td align="center">
+        <table cellpadding="0" cellspacing="0" border="0" style="border-radius: 15px; background: #FFEDEA;
+        padding: 20px;">
+          <tr>
+            <td align="center" style="color: #040A21;text-align: center;font-size: 18px;font-weight: 700;line-height:
+             151.533%;padding: 0 0 5px;">
+              {{ .Title }}
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+                {{ range .Users }}
+                <div style="width: 47%; margin: 22px 0 0;border-radius: 10px">
+                  <img src="{{ .PhotoURL }}" alt="{{ .UserName }}" style="width: 100%; height: auto;" />
+                  <div style="padding: 16px 21px;border-radius: 0 0 10px 10px;background: #FFD1CA;margin: -4px 0 0;">
+                    <p style="margin: 0 0 3px;color: #040A21;text-align: center;font-size: 16px;">{{ .UserName }}</p>
+                    <p style="margin: 0 0 20px;color: #FF4931;text-align: center;font-size: 14px;">{{ .UserCity }}</p>
+                    <a href="#"
+                       target="_blank"
+                       style="
+                    display: block;
+                    text-align: center;
+                    background-color: {{$.ButtonColor }};
+                    color: #fff;
+                    font-size: 14px;
+                    font-weight: 700;
+                    border-radius: 100px;
+                    padding: 12px 10px;
+                    text-decoration: none;">Send message</a>
+                  </div>
+                </div>
+                {{ end }}
+              </div>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td align="left">
+        <table cellpadding="0" cellspacing="0" border="0" style="color: #FFEDEA;padding: 30px 0;">
+          <tr>
+            <td>
+              <p style="color: #FFEDEA;font-size: 12px;line-height: 120%; margin: 0 0 14px;">
+                This email was sent to
+                <strong>
+                  <a href="mailto:{{ .ReceiverEmail }}" style="color: #FFEDEA; text-decoration: none;">{{ .ReceiverEmail }}</a>
+                </strong>.
+                This email address is linked to a {{ .SenderName }} account, and according to the settings and conditions of use, it receives notifications.
+                <br>
+                To unsubscribe or change your settings, follow the link -
+                <strong><a href="#" style="color: #FFEDEA; text-decoration: none;">set up mail delivery</a></strong>.
+              </p>
+              <p style="color: #FFEDEA;text-align: center;font-size: 12px;line-height: 120%; margin: 0 0 15px;">{{
+                .LegalAddress }}</p>
+              <ul style="display: flex; justify-content: space-between; margin: 0; padding: 0; list-style: none;color: #FFEDEA;text-align: center;font-size: 12px;line-height: 120%;">
+                <li><a href="#" style="color: #FFEDEA; text-decoration: none;">Privacy Policy</a></li>
+                <li><a href="#" style="color: #FFEDEA; text-decoration: none;">Terms of Service</a></li>
+                <li><a href="#" style="color: #FFEDEA; text-decoration: none;">Subscription Terms</a></li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
